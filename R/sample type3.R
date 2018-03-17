@@ -6,8 +6,6 @@
 #' @export
 lotto3<-function(n,a=NULL,b=NULL,head=10,write=F){
   lottonum<-data_update()
-
-  print(head(lottonum))
   package(progress)
   num<-num_per()/num_per(data=type2data[1:100,])
   del1<-round(num_per()*num,10)
