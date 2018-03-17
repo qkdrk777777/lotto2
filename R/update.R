@@ -2,7 +2,7 @@
 #'
 #' @return lotto data
 #' @examples
-#' data_update()
+#' data_update(update=T)
 #' lottonum
 #' @export
 data_update<-function(update=F){
@@ -17,8 +17,8 @@ data_update<-function(update=F){
   p1<-html_nodes(line,css='._lotto-btn-current em')%>%html_text()
   last=as.numeric(str_replace_all(p1,"[^0-9]",""))
   if(lottonum[1,7]<last)lottonum<-rbind(numdata(first=lottonum[1,7]+1,last=last),lottonum)
-  #if(update==T)devtools::use_data(lottonum, internal = F,overwrite=T)
-  lottonum<<-lottonum
+  if(update==T)devtools::use_data(lottonum, internal = F,overwrite=T)
+
   return(lottonum)
 }
 
