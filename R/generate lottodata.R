@@ -7,13 +7,16 @@
 #'p1<-html_nodes(line,css='._lotto-btn-current em')%>%html_text()
 #'last=as.numeric(substr(p1,1,3))
 #' (data<-numdata(last=last,update=T,sleep=0))
+#'
 #' @export
 numdata<-function(first=1,last,num=list(),output=list(),k=1,update=F,sleep=1)
 { library(devtools)
   if(!require(lotto))install_github('qkdrk777777/lotto')
   package(progress); package('XML');  package('stringr');  package('rvest')
+
   pb<-progress_bar$new(total=(last-first))
   for(i in last:first){
+    url<-paste0('https://search.naver.com/search.naver?sm=tab_drt&where=nexearch&query=',i,'%ED%9A%8C%EB%A1%9C%EB%98%90')
     lines<-read_html(url,encoding='UTF-8')
     keep<-html_nodes(lines,css='.num_box')%>% html_text()
     output[[k]]<-c(as.numeric(strsplit(str_trim(keep),split=" ")[[1]][1:6]),i)
