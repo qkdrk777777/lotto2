@@ -1,7 +1,7 @@
 #' lotto
 #'
 #' @param n = The number of times the sample is pulled
-#' @examples lot(1000)
+#' @examples lotto3(5)
 #' @return
 #' @export
 lotto3<-function(n,a=NULL,b=NULL,head=10,write=F){
