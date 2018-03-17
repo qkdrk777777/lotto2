@@ -6,6 +6,7 @@
 #' round(cor(data2),3)
 #' @export
 data_update2<-function(data=data_update()){
+  lottonum<<-data
   data2<-matrix(0,ncol=45,nrow=nrow(data));colnames(data2)=1:45
   for(i in 1:nrow(data2))
   {for(j in 1:6)
