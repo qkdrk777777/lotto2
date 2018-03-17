@@ -2,7 +2,8 @@
 #'
 #' @return lotto data
 #' @examples
-#' data_update()
+#' lottonum<-data_update()
+#' lottonum
 #' @export
 data_update<-function(update=F){
   library(DUcj)
