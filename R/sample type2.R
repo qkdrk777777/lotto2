@@ -5,12 +5,11 @@
 #' @param drop =The number corresponding to 'drop' does not appear.
 #' @param hold =This number appears unconditionally.
 #' @examples (k<-sort(num_per()[as.numeric(data[1,1:6])],dec=T))
-#' lotto2(n=10000,hold=as.numeric(names(k[1])),header=10)
+#' lotto2(n=100,hold=as.numeric(names(k[1])),header=10)
 #' @return
 #' @export
 lotto2<-function(n,count=1,keep=NULL,drop=NULL,hold=NULL,up=NULL,header=10,write=F)
-{
-  data_update()
+{lottonum<- data_update()
 
     t<-lotto1(n,keep=keep,drop=drop,hold=hold)
 if(ncol(t)>7)t<-t[,-(8:ncol(t))]

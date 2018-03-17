@@ -13,3 +13,4 @@ del<-function(n=100,tol=1,keep=NULL,drop=NULL){
   num[temp]<-0
   return(num)}
 
+#del()
