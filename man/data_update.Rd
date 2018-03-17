@@ -13,6 +13,6 @@ lotto data
 update lotto data
 }
 \examples{
-lottonum<-data_update()
+data_update()
 lottonum
 }
