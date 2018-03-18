@@ -2,7 +2,7 @@
 #'
 #' @return lotto data
 #' @examples
-#' data_update(update=T)
+#' data_update(update=TRUE)
 #' data_update()
 #' lottonum
 #' @export
