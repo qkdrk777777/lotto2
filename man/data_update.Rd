@@ -13,6 +13,7 @@ lotto data
 update lotto data
 }
 \examples{
+data_update(update=T)
 data_update()
 lottonum
 }

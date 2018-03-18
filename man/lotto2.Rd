@@ -21,5 +21,5 @@ sample2
 }
 \examples{
 (k<-sort(num_per()[as.numeric(data[1,1:6])],dec=T))
-lotto2(n=10000,hold=as.numeric(names(k[1])),header=10)
+lotto2(n=100,hold=as.numeric(names(k[1])),header=10)
 }

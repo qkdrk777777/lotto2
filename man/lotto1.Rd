@@ -17,5 +17,5 @@ sample type1
 lotto1(5)
 (k<-sort(num_per()[as.numeric(data[1,1:6])],dec=T))
 lotto1(n=5,keep=k[1])
-lotto1(n=5000,hold=as.numeric(names(k[1])))
+lotto1(n=50000,hold=as.numeric(names(k[1])))
 }

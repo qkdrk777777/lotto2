@@ -13,5 +13,5 @@ lotto3(n, a = NULL, b = NULL, head = 10, write = F)
 lotto
 }
 \examples{
-lot(1000)
+lotto3(5)
 }
