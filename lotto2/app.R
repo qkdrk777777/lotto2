@@ -27,4 +27,4 @@ output$type2<-renderUI({dataTableOutput('type1')})
 
 
 shinyApp(ui,server)
-tryCatch()
+
