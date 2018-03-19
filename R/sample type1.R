@@ -9,6 +9,7 @@
 #' @export
 lotto1<-function(n,keep=NULL,drop=NULL,hold=NULL,a=NULL,write=F,wd=NULL){
   lottonum<-data_update()
+  package(progress)
   pb<-progress_bar$new(total=n)
 
   if(length(hold)==0){del2<-del(keep=keep,drop=drop)
