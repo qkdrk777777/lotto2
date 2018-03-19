@@ -2,6 +2,7 @@
 library(xml2)
 library(devtools)
 library(DUcj)
+install_github('qkdrk777777/lotto2')
 library(lotto2)
 library(rvest)
 
