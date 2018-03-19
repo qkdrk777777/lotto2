@@ -11,7 +11,7 @@ lotto1<-function(n,keep=NULL,drop=NULL,hold=NULL,a=NULL,write=F,wd=NULL){
   lottonum<-data_update()
   package(progress)
   pb<-progress_bar$new(total=n)
-
+if(hold==0)hold<-NULL
   if(length(hold)==0){del2<-del(keep=keep,drop=drop)
   for(i in 1:n){a<-rbind(a,sort(sample(1:45,6,prob=del2)))
   pb$tick()
