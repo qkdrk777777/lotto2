@@ -5,6 +5,7 @@
 #' @return
 #' @export
 del<-function(n=100,tol=1,keep=NULL,drop=NULL){
+  data_update2()
   per<-num_per()/num_per(data=type2data[1:n,])
   (del_num<-as.numeric(names(per[per<tol])))
   temp<-c(setdiff(del_num,keep),drop)

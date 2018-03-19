@@ -15,6 +15,7 @@ data_update2<-function(data=data_update()){
   }}
   rownames(data2)<-nrow(data2):1
   lottonum2<<-data2
+  type2data<<-data2
     return(data2)}
 
 #devtools::use_data(type2data, internal = F,overwrite=T)
