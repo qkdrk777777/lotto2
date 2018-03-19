@@ -2,7 +2,7 @@
 #'
 #' @param n = number of sample
 #' @examples lotto1(5)
-#' (k<-sort(num_per()[as.numeric(data[1,1:6])],dec=T))
+#' (k<-sort(num_per()[as.numeric(lottonum[1,1:6])],dec=T))
 #' lotto1(n=5,keep=k[1])
 #' lotto1(n=50000,hold=as.numeric(names(k[1])))
 #' @return
@@ -21,7 +21,7 @@ lotto1<-function(n,keep=NULL,drop=NULL,hold=NULL,a=NULL,write=F,wd=NULL){
   pb$tick()
   }
   }
-  output<-cbind(a,data[1,7]+1)
+  output<-cbind(a,lottonum[1,7]+1)
   colnames(output)<-colnames(lottonum)
 if(write==T)write.csv(output,paste0(wd,'lotto.csv'))
 return(output)}
