@@ -11,7 +11,7 @@ lotto3<-function(n,a=NULL,b=NULL,head=10,write=F){
   del1<-round(num_per()*num,10)
   pb<-progress_bar$new(total=n)
   for(i in 1:n){
-    a<-c(sort(sample(1:45,6,prob=del1)),data[1,7]+1,1)
+    a<-c(sort(sample(1:45,6,prob=del1)),lottonum[1,7]+1,1)
     if(length(b)==0)b<-rbind(b,a)else{
       for(j in 1:nrow(b)-1){
         if(setequal(b[j,1:6],a[1:6]))b[j,8]<-b[j,8]+1}
